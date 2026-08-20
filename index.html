@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pop Scout — Emerging Artist Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="wordmark" href="#top">P O P&nbsp;&nbsp;S C O U T</a>
+  <nav class="topnav">
+    <a href="#filters">Filters</a>
+    <a href="#results">Roster</a>
+    <a href="#methodology">Methodology</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <span class="eyebrow">Scouting — Pop / Q3 2026</span>
+    <h1 class="hero-headline">Tracking the next wave<br>of pop before the labels do.</h1>
+    <p class="hero-sub">A working watchlist of emerging pop artists, built from trade press, niche newsletters, and Spotify's public artist data — filtered down to acts still small enough to sign.</p>
+    <div class="hero-stats" id="statsRow"></div>
+  </section>
+
+  <div class="rule"></div>
+
+  <section class="statement">
+    <h2>SIGNAL<br>BEFORE<br>SCALE.</h2>
+  </section>
+
+  <div class="rule"></div>
+
+  <section class="workspace">
+
+    <aside class="filter-panel" id="filters">
+      <span class="eyebrow">Filters</span>
+
+      <label for="searchInput">Search</label>
+      <input type="text" id="searchInput" placeholder="Artist, genre, or source…" autocomplete="off">
+
+      <label>Status</label>
+      <div class="status-stack" id="statusFilter">
+        <button class="status-btn" data-value="all">All candidates</button>
+        <button class="status-btn active" data-value="qualifies">Qualifies</button>
+        <button class="status-btn" data-value="unverified">Unverified</button>
+        <button class="status-btn" data-value="established">Established</button>
+        <button class="status-btn" data-value="off_genre">Off genre</button>
+      </div>
+
+      <label for="listenerCap">Max monthly listeners</label>
+      <select id="listenerCap">
+        <option value="">No cap</option>
+        <option value="100000">Under 100K</option>
+        <option value="50000">Under 50K</option>
+        <option value="10000">Under 10K</option>
+      </select>
+
+      <label for="sortBy">Sort</label>
+      <select id="sortBy">
+        <option value="listeners-asc">Monthly listeners — low to high</option>
+        <option value="listeners-desc">Monthly listeners — high to low</option>
+        <option value="name-asc">Name — A to Z</option>
+        <option value="status">Status</option>
+      </select>
+
+      <div class="divider"></div>
+
+      <span class="eyebrow">Shortlist</span>
+      <div class="shortlist-head">
+        <span class="shortlist-count" id="shortlistCount">0 selected</span>
+        <button class="copy-btn" id="copyShortlist">Copy</button>
+      </div>
+      <div id="shortlistList" class="shortlist-list"></div>
+      <p class="shortlist-empty" id="shortlistEmpty">No artists shortlisted yet. Add candidates from the roster.</p>
+      <span class="copy-status" id="copyStatus"></span>
+    </aside>
+
+    <section class="results" id="results">
+      <div class="results-header">
+        <span class="eyebrow" id="resultsCount">— candidates</span>
+      </div>
+      <div class="results-list" id="resultsList"></div>
+      <p class="empty-state" id="emptyState" hidden>No artists match these filters.</p>
+    </section>
+
+  </section>
+
+  <div class="rule"></div>
+
+  <footer id="methodology">
+    <span class="eyebrow">Methodology</span>
+    <p>Compiled from public trade press, editorial "artists to watch" features, niche music newsletters, and
+    Spotify's public artist pages (checked while logged out). Listener and stream counts are manually verified
+    snapshots taken on the date shown per artist — not a live feed. Next step: wire this to a real API backend
+    for continuous, weekly-refreshing coverage.</p>
+  </footer>
+
+</main>
+
+<script src="data.js?v=6"></script>
+<script src="app.js?v=6"></script>
+</body>
+</html>
