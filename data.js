@@ -283,6 +283,8 @@ const ARTISTS = [
     signal: "44K monthly listeners (would qualify) but top track has 2.1M streams — over the cap. Featured on Pigeons & Planes 'Fresh Finds: Class of 2023.'",
     source: "SongsBrew — RADAR",
     sourceUrl: "https://songsbrew.com/radar",
+    spotifyUrl: "https://open.spotify.com/artist/0bDqmuVnpecyZQuXZ7i85s",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebed2c3bad9668dcaf74c778cf",
     checkedAt: "2026-08-19"
   },
   {
@@ -295,6 +297,8 @@ const ARTISTS = [
     signal: "83K monthly listeners (would qualify) but top track has 4.1M streams — over the cap.",
     source: "SongsBrew — RADAR",
     sourceUrl: "https://songsbrew.com/radar",
+    spotifyUrl: "https://open.spotify.com/artist/7mupgmN5rkDNGrqQt1tjcf",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebd3211e48abddc43002c92734",
     checkedAt: "2026-08-19"
   },
   {
@@ -307,6 +311,8 @@ const ARTISTS = [
     signal: "196K monthly listeners, top track 1.8M streams.",
     source: "SongsBrew — RADAR",
     sourceUrl: "https://songsbrew.com/radar",
+    spotifyUrl: "https://open.spotify.com/artist/4ONWsNz3B7tSR0fgURDrj8",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebb98ed0e76471a9f3f0784f0f",
     checkedAt: "2026-08-19"
   },
 
@@ -322,6 +328,7 @@ const ARTISTS = [
     source: "Notion Magazine — Undiscovered",
     sourceUrl: "https://notion.online/undiscovered-308-humble-the-great-pretty-sick-esme-emerson-starcleaner-reunion/",
     spotifyUrl: "https://open.spotify.com/artist/6Jaz8RyF3F9ktK4aVFgbTL",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb0135b529fe8f9ef38c8ea3dd",
     checkedAt: "2026-08-18"
   },
   {
@@ -335,6 +342,7 @@ const ARTISTS = [
     source: "Hear Hear (Substack)",
     sourceUrl: "https://hearhear.substack.com/p/essential-summer-2026-playlists",
     spotifyUrl: "https://open.spotify.com/artist/5T68nryXXOMNE2kVe61fKX",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb5021e6c0fd79f816e15ce79c",
     checkedAt: "2026-08-18"
   },
   {
@@ -348,6 +356,7 @@ const ARTISTS = [
     source: "One Write Music (Substack)",
     sourceUrl: "https://onewritemusic.substack.com/archive",
     spotifyUrl: "https://open.spotify.com/artist/7fNI5DhplKeFCErRvzRCVO",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebf3f639809be87cc93401cd06",
     checkedAt: "2026-08-18"
   },
   {
@@ -361,6 +370,7 @@ const ARTISTS = [
     source: "One Write Music (Substack)",
     sourceUrl: "https://onewritemusic.substack.com/archive",
     spotifyUrl: "https://open.spotify.com/artist/3XRj6XMmub9546oUagEqHY",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebf6695b5294825fff96b1f3f0",
     checkedAt: "2026-08-18"
   },
   {
@@ -374,6 +384,7 @@ const ARTISTS = [
     source: "One Write Music (Substack)",
     sourceUrl: "https://onewritemusic.substack.com/",
     spotifyUrl: "https://open.spotify.com/artist/2mN6M9Kde408WNk0YrHnQn",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb9cf4ff219f2dde3141d2980b",
     checkedAt: "2026-08-18"
   },
 
@@ -389,6 +400,7 @@ const ARTISTS = [
     source: "Hear Hear (Substack)",
     sourceUrl: "https://hearhear.substack.com/p/7-rising-artists-to-know-in-2026",
     spotifyUrl: "https://open.spotify.com/artist/0xd16ai4mtpBCnoaAHCw1a",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb130c759031ef966ca1993559",
     checkedAt: "2026-08-18"
   },
   {
@@ -402,6 +414,7 @@ const ARTISTS = [
     source: "Pigeons and Planes",
     sourceUrl: "https://www.pigeonsandplanes.com/read/artists-to-watch-2026",
     spotifyUrl: "https://open.spotify.com/artist/40Aif8AfzbNGA2s52ESEE2",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebfe65607fc5d71a6ba257b04a",
     checkedAt: "2026-08-18"
   },
   {
@@ -415,6 +428,7 @@ const ARTISTS = [
     source: "Pigeons and Planes",
     sourceUrl: "https://www.pigeonsandplanes.com/read/artists-to-watch-2026",
     spotifyUrl: "https://open.spotify.com/artist/18w9tq3c2x11niEFNYqeex",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb5824a9f9a31cd7cbec85c10f",
     checkedAt: "2026-08-18"
   },
   {
@@ -428,6 +442,7 @@ const ARTISTS = [
     source: "Pigeons and Planes",
     sourceUrl: "https://www.pigeonsandplanes.com/read/artists-to-watch-2026",
     spotifyUrl: "https://open.spotify.com/artist/5D70nuec9omH4CXmCGXGTu",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb19fb94ccb172aa71879eb1d8",
     checkedAt: "2026-08-18"
   },
   {
@@ -441,6 +456,7 @@ const ARTISTS = [
     source: "Pigeons and Planes",
     sourceUrl: "https://www.pigeonsandplanes.com/read/artists-to-watch-2026",
     spotifyUrl: "https://open.spotify.com/artist/4QlEFh3gBGqmboPVc7AwUp",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb6cad9182d5b1c05178579d1c",
     checkedAt: "2026-08-18"
   },
   {
@@ -454,6 +470,7 @@ const ARTISTS = [
     source: "Pigeons and Planes",
     sourceUrl: "https://www.pigeonsandplanes.com/read/artists-to-watch-2026",
     spotifyUrl: "https://open.spotify.com/artist/4WBs3HlXxMAqo8Yi6m1PCM",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb552a55dfc284de6017b9f596",
     checkedAt: "2026-08-18"
   },
   {
@@ -467,6 +484,7 @@ const ARTISTS = [
     source: "Spotify Newsroom",
     sourceUrl: "https://newsroom.spotify.com/2026-01-12/artists-to-watch-2026/",
     spotifyUrl: "https://open.spotify.com/artist/66T34XqGkEWbzKWALSBDuR",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebf24b273d9959e097972d5992",
     checkedAt: "2026-08-18"
   },
   {
@@ -480,6 +498,7 @@ const ARTISTS = [
     source: "Spotify Newsroom",
     sourceUrl: "https://newsroom.spotify.com/2026-01-12/artists-to-watch-2026/",
     spotifyUrl: "https://open.spotify.com/artist/2dvThKiNFqpd5CVFCtJuFf",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb8569d7cc2e8aa97c1c0ddb63",
     checkedAt: "2026-08-18"
   },
   {
@@ -493,6 +512,7 @@ const ARTISTS = [
     source: "Spotify Newsroom",
     sourceUrl: "https://newsroom.spotify.com/2026-01-12/artists-to-watch-2026/",
     spotifyUrl: "https://open.spotify.com/artist/7Iz5t3KpNWPtB2uB2YyeN6",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb034d4cadc0077cfed95d47f1",
     checkedAt: "2026-08-18"
   },
   {
@@ -506,6 +526,7 @@ const ARTISTS = [
     source: "Spotify Newsroom",
     sourceUrl: "https://newsroom.spotify.com/2026-01-12/artists-to-watch-2026/",
     spotifyUrl: "https://open.spotify.com/artist/3L7svRFWE5kcIReq1uwC5J",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebbf55e8a9205d97638b3b8283",
     checkedAt: "2026-08-18"
   },
   {
@@ -519,6 +540,7 @@ const ARTISTS = [
     source: "BBC Sound of 2026",
     sourceUrl: "https://www.officialcharts.com/chart-news/bbc-sound-of-2026-nominees/",
     spotifyUrl: "https://open.spotify.com/artist/6QXtidyXX0uGggafrYdktx",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb715ffd45173e5ed071a4e2ae",
     checkedAt: "2026-08-18"
   },
   {
@@ -532,6 +554,7 @@ const ARTISTS = [
     source: "BBC Sound of 2026",
     sourceUrl: "https://www.officialcharts.com/chart-news/bbc-sound-of-2026-nominees/",
     spotifyUrl: "https://open.spotify.com/artist/1WNmfSqydnt1FDJKg3l6lw",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb6ce6c2c63238915bf4639c01",
     checkedAt: "2026-08-18"
   },
   {
@@ -545,6 +568,7 @@ const ARTISTS = [
     source: "BBC Sound of 2026",
     sourceUrl: "https://www.clashmusic.com/news/bbc-radio-1s-sound-of-2026-longlist-revealed/",
     spotifyUrl: "https://open.spotify.com/artist/0zzKEeF2bAVKrWeKc9CyJV",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebbc977e0b5ade4d8ac553379c",
     checkedAt: "2026-08-18"
   },
   {
@@ -558,6 +582,7 @@ const ARTISTS = [
     source: "BBC Sound of 2026",
     sourceUrl: "https://www.clashmusic.com/news/bbc-radio-1s-sound-of-2026-longlist-revealed/",
     spotifyUrl: "https://open.spotify.com/artist/7MxGWmiAbqjNOGmj23wbWf",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb5bc948e89bba35a5f24c9b2d",
     checkedAt: "2026-08-18"
   },
   {
@@ -571,6 +596,7 @@ const ARTISTS = [
     source: "Popdust",
     sourceUrl: "https://www.popdust.com/artists-to-watch-2026",
     spotifyUrl: "https://open.spotify.com/artist/39hfuTf4PHfnHgIl0QBDGL",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebc8d3c61efe70ba51161f57ca",
     checkedAt: "2026-08-18"
   },
   {
@@ -584,6 +610,7 @@ const ARTISTS = [
     source: "Tuned Up",
     sourceUrl: "https://www.iamtunedup.com/tuned-ups-2026-breakout-artist-predictions/",
     spotifyUrl: "https://open.spotify.com/artist/0ndpuECxVStTsHhzq4Euxz",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebb4071cab2932274da4fcc011",
     checkedAt: "2026-08-18"
   },
   {
@@ -597,6 +624,7 @@ const ARTISTS = [
     source: "Hear Hear (Substack)",
     sourceUrl: "https://hearhear.substack.com/p/7-rising-artists-to-know-in-2026",
     spotifyUrl: "https://open.spotify.com/artist/4TZieE5978SbTInJswaay2",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebb13056618197091ef0d3b5e6",
     checkedAt: "2026-08-18"
   },
   {
@@ -609,6 +637,8 @@ const ARTISTS = [
     signal: "Breakout single has ~61M streams — well over the 1M cap.",
     source: "Hear Hear (Substack)",
     sourceUrl: "https://hearhear.substack.com/p/7-rising-artists-to-know-in-2026",
+    spotifyUrl: "https://open.spotify.com/artist/34A8vV1MCxGpA14KspqQuC",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb2bd0d5319cf1eaf527b0a043",
     checkedAt: "2026-08-18"
   },
   {
@@ -621,6 +651,8 @@ const ARTISTS = [
     signal: "Already proven TikTok algorithm command + real chart traction. Positioned for full breakout, too far along.",
     source: "Billboard",
     sourceUrl: "https://www.billboard.com/pro/major-label-viral-artist-signings-tiktok-cooling-off/",
+    spotifyUrl: "https://open.spotify.com/artist/4OVbrPbhvK46A1uXTU1u5F",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebcbe07eb41d5a7c57741b3881",
     checkedAt: null
   },
   {
@@ -633,6 +665,8 @@ const ARTISTS = [
     signal: "'did i tell u that i miss u' has hit hundreds of millions of streams.",
     source: "Rolling Stone UK",
     sourceUrl: "https://www.rollingstone.co.uk/music/rolling-stone-uk-future-of-music-2026-full-list-61467/",
+    spotifyUrl: "https://open.spotify.com/artist/7ofG5BaSiQp8WeL4YCYDhF",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebb2e0d242decc77b993b82149",
     checkedAt: null
   },
   {
@@ -645,6 +679,8 @@ const ARTISTS = [
     signal: "Already signed to Capitol/Polydor after 'The Debut: Dream Academy'; collabs with Grimes, Dylan Brady.",
     source: "Variety",
     sourceUrl: "https://variety.com/2026/film/news/tate-mcrae-sombr-tyriq-withers-power-of-young-hollywood-1236810170/",
+    spotifyUrl: "https://open.spotify.com/artist/2qanRMyA5bNuTvz1dK45OP",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb2c27abd675ecdf05325e9615",
     checkedAt: null
   },
   {
@@ -657,6 +693,8 @@ const ARTISTS = [
     signal: "BBC Sound of 2026 winner. Four Official Singles Chart hits already.",
     source: "BBC Sound of 2026",
     sourceUrl: "https://diymag.com/news/skye-newman-winner-bbc-radio-1-sound-of-2026",
+    spotifyUrl: "https://open.spotify.com/artist/4UoEzpWZrFWvlGYOzTEn1M",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb1401547523ecd0d6d329cebb",
     checkedAt: null
   },
   {
@@ -669,6 +707,8 @@ const ARTISTS = [
     signal: "2026 Grammy Best New Artist winner. No. 1 on Billboard Pop Airplay.",
     source: "Grammy.com",
     sourceUrl: "https://www.grammy.com/news/2026-grammys-nominations-best-new-artist/",
+    spotifyUrl: "https://open.spotify.com/artist/00x1fYSGhdqScXBRpSj3DW",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb5c7577ad44daeb7ce4b941a1",
     checkedAt: null
   },
   {
@@ -681,6 +721,8 @@ const ARTISTS = [
     signal: "2026 Grammy Best New Artist nominee. 'Back to Friends' was a Hot 100 top-10, charted 52 weeks.",
     source: "Grammy.com",
     sourceUrl: "https://www.grammy.com/news/2026-grammys-nominations-best-new-artist/",
+    spotifyUrl: "https://open.spotify.com/artist/4G9NDjRyZFDlJKMRL8hx3S",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb78edaa6468cae153565c2c97",
     checkedAt: null
   },
   {
@@ -693,6 +735,8 @@ const ARTISTS = [
     signal: "2026 Grammy Best New Artist + Best Pop Duo/Group nominee.",
     source: "Grammy.com",
     sourceUrl: "https://www.grammy.com/news/2026-grammys-nominations-best-new-artist/",
+    spotifyUrl: "https://open.spotify.com/artist/3c0gDdb9lhnHGFtP4prQpn",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb04ba72b2749f90d62152ebec",
     checkedAt: null
   },
   {
@@ -705,6 +749,8 @@ const ARTISTS = [
     signal: "2026 Grammy Best New Artist nominee.",
     source: "Grammy.com",
     sourceUrl: "https://www.grammy.com/news/2026-grammys-nominations-best-new-artist/",
+    spotifyUrl: "https://open.spotify.com/artist/4gvjmrtzydbMpyJaXUtwvP",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb8aaca79d5544dc02bea2b6b2",
     checkedAt: null
   },
   {
@@ -717,6 +763,8 @@ const ARTISTS = [
     signal: "2026 Grammy Best New Artist nominee. 'Ordinary' was a record-breaking hit.",
     source: "Grammy.com",
     sourceUrl: "https://www.grammy.com/news/2026-grammys-nominations-best-new-artist/",
+    spotifyUrl: "https://open.spotify.com/artist/0fTSzq9jAh4c36UVb4V7CB",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebe027df2e591e1a050e5235cc",
     checkedAt: null
   },
   {
@@ -729,6 +777,8 @@ const ARTISTS = [
     signal: "2026 Grammy Best New Artist nominee.",
     source: "Grammy.com",
     sourceUrl: "https://www.grammy.com/news/2026-grammys-nominations-best-new-artist/",
+    spotifyUrl: "https://open.spotify.com/artist/67FB4n52MgexGQIG8s0yUH",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebb9fb07d9832af024020defac",
     checkedAt: null
   },
   {
@@ -741,6 +791,8 @@ const ARTISTS = [
     signal: "Debut album peaked at #40 Billboard Hot 100. Sold-out tour.",
     source: "Popdust",
     sourceUrl: "https://www.popdust.com/artists-to-watch-2026",
+    spotifyUrl: "https://open.spotify.com/artist/4N0TAwz9vhnQtjCqS65aKS",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb4fc78e354b19324810f1e933",
     checkedAt: null
   },
   {
@@ -753,6 +805,8 @@ const ARTISTS = [
     signal: "Variety Power of Young Hollywood 2026, Triple Threat Award. 20.8B+ overall streams.",
     source: "Variety",
     sourceUrl: "https://variety.com/2026/film/news/tate-mcrae-sombr-tyriq-withers-power-of-young-hollywood-1236810170/",
+    spotifyUrl: "https://open.spotify.com/artist/45dkTj5sMRSjrmBSBeiHym",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebbed8016bd64422793ff3bc75",
     checkedAt: null
   },
   {
@@ -766,6 +820,7 @@ const ARTISTS = [
     source: "DIY Magazine — The Neu Bulletin",
     sourceUrl: "https://diymag.com/neu",
     spotifyUrl: "https://open.spotify.com/artist/1fWoiW6kTjrVDoRc4ba3kh",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebd929fb535c844ceba4274762",
     checkedAt: "2026-08-18"
   },
   {
@@ -779,6 +834,7 @@ const ARTISTS = [
     source: "DIY Magazine — The Neu Bulletin",
     sourceUrl: "https://diymag.com/neu",
     spotifyUrl: "https://open.spotify.com/artist/5rXNmuTfaGC8hw0JEQOpLc",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb846ac8aa1fc79cf5cd0d222d",
     checkedAt: "2026-08-18"
   },
   {
@@ -792,6 +848,7 @@ const ARTISTS = [
     source: "DIY Magazine — The Neu Bulletin",
     sourceUrl: "https://diymag.com/neu",
     spotifyUrl: "https://open.spotify.com/artist/4cCA6V2DRIDqeYDyGIcEoj",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb2aa98b09bdaeec471a285c7d",
     checkedAt: "2026-08-18"
   },
   {
@@ -805,6 +862,7 @@ const ARTISTS = [
     source: "Pigeons and Planes",
     sourceUrl: "https://www.pigeonsandplanes.com/read/artists-to-watch-2026",
     spotifyUrl: "https://open.spotify.com/artist/05pLxSVIyZiQTqQnR4QQ9H",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb0c77047950c697730f5c9d3f",
     checkedAt: "2026-08-18"
   },
   {
@@ -818,6 +876,7 @@ const ARTISTS = [
     source: "Hear Hear (Substack)",
     sourceUrl: "https://hearhear.substack.com/p/essential-summer-2026-playlists",
     spotifyUrl: "https://open.spotify.com/artist/2AK3F4tVjxYuqSGefozy52",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb761e659d246b7dc112677594",
     checkedAt: "2026-08-18"
   },
   {
@@ -831,6 +890,7 @@ const ARTISTS = [
     source: "Hear Hear (Substack)",
     sourceUrl: "https://hearhear.substack.com/p/essential-summer-2026-playlists",
     spotifyUrl: "https://open.spotify.com/artist/4EnymklUyqZwvmHQGlRssl",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb87566e5488cea24c83090eb7",
     checkedAt: "2026-08-18"
   },
   {
@@ -844,6 +904,7 @@ const ARTISTS = [
     source: "Hear Hear (Substack)",
     sourceUrl: "https://hearhear.substack.com/p/essential-summer-2026-playlists",
     spotifyUrl: "https://open.spotify.com/artist/5r0BuurxKQugj8cjHiO8pY",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb5e397a04c6e3b0254d9de3c7",
     checkedAt: "2026-08-18"
   },
 
@@ -858,6 +919,8 @@ const ARTISTS = [
     signal: "Psychedelic soul, not pop. Also a 2026 Grammy Best New Artist nominee — too big regardless.",
     source: "Grammy.com",
     sourceUrl: "https://www.grammy.com/news/2026-grammys-nominations-best-new-artist/",
+    spotifyUrl: "https://open.spotify.com/artist/2sSGPbdZJkaSE2AbcGOACx",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebaf586afa2b397f1288683a76",
     checkedAt: null
   },
   {
@@ -870,6 +933,8 @@ const ARTISTS = [
     signal: "UK rap, not pop. Also one of 2025's most significant breakout British artists — too big regardless.",
     source: "Tuned Up",
     sourceUrl: "https://www.iamtunedup.com/tuned-ups-2026-breakout-artist-predictions/",
+    spotifyUrl: "https://open.spotify.com/artist/0EyhkwP3UnwGFBy6xwKjSy",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebfe6d53e126b70d1c2594b434",
     checkedAt: null
   },
   {
@@ -883,6 +948,7 @@ const ARTISTS = [
     source: "Pigeons and Planes",
     sourceUrl: "https://www.pigeonsandplanes.com/read/artists-to-watch-2026",
     spotifyUrl: "https://open.spotify.com/artist/3FFfAZsrsx8ot1m6H5vzQc",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebc0bfad65f5a3c913a477d07b",
     checkedAt: "2026-08-18"
   },
   {
@@ -896,6 +962,7 @@ const ARTISTS = [
     source: "Notion Magazine — Undiscovered",
     sourceUrl: "https://notion.online/tag/undiscovered/",
     spotifyUrl: "https://open.spotify.com/artist/3U7XDjbMZWVbis1wAUzjMq",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb995d89583bd8c81dab43d0f7",
     checkedAt: "2026-08-18"
   },
   {
@@ -909,6 +976,7 @@ const ARTISTS = [
     source: "DIY Magazine — The Neu Bulletin",
     sourceUrl: "https://diymag.com/neu",
     spotifyUrl: "https://open.spotify.com/artist/3ZyjpHbSpzsLV3ZEyJZBAW",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb7d8d8c483a388cba6d861ca0",
     checkedAt: "2026-08-18"
   },
   {
@@ -922,6 +990,7 @@ const ARTISTS = [
     source: "DIY Magazine — The Neu Bulletin",
     sourceUrl: "https://diymag.com/neu",
     spotifyUrl: "https://open.spotify.com/artist/3n9jB3AymRSh9peJBrihrx",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb59f292bc1105dc2699628255",
     checkedAt: "2026-08-18"
   }
 ];
