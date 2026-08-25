@@ -16,7 +16,7 @@ Artists are sorted into:
 - **Off genre** — doesn't fit pop regardless of size, kept for the record rather than deleted
 - **Unverified** — flagged by a source but not yet checked against Spotify
 
-As of the last update: 70 artists tracked, 19 qualifying, 45 established, 6 off genre, across 26 distinct sources.
+As of the last update: 70 artists tracked, 19 qualifying, 45 established, 6 off genre, sourced from **14 outlets actively contributing data** (30 registered in total — see below for the 16 still to be mined). The dashboard's own "Sources" stat counts distinct outlets represented in the tracked data, so it only moves once a source has actually produced an artist.
 
 ## Sources
 
