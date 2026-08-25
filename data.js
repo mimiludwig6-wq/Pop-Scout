@@ -18,6 +18,7 @@ const ARTISTS = [
     source: "Hear Hear (Substack)",
     sourceUrl: "https://hearhear.substack.com/p/7-rising-artists-to-know-in-2026",
     spotifyUrl: "https://open.spotify.com/artist/0z4BrD9oXnSUhUd80zLgCL",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb474cefccfb9e995988b538c2",
     checkedAt: "2026-08-18"
   },
   {
@@ -31,6 +32,7 @@ const ARTISTS = [
     source: "Hear Hear (Substack)",
     sourceUrl: "https://hearhear.substack.com/p/7-rising-artists-to-know-in-2026",
     spotifyUrl: "https://open.spotify.com/artist/360qeHf7kan9K9bKFPNwVM",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb14a593bdd0b60a4fba498c15",
     checkedAt: "2026-08-18"
   },
   {
@@ -44,6 +46,7 @@ const ARTISTS = [
     source: "Rolling Stone UK",
     sourceUrl: "https://www.rollingstone.co.uk/music/rolling-stone-uk-future-of-music-2026-full-list-61467/",
     spotifyUrl: "https://open.spotify.com/artist/2XPubfqZp6J4uEEJop2OL2",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb5598b458e458433df18d51af",
     checkedAt: "2026-08-18"
   },
   {
@@ -57,6 +60,7 @@ const ARTISTS = [
     source: "Hear Hear (Substack) — Essential Summer 2026 playlists",
     sourceUrl: "https://hearhear.substack.com/p/essential-summer-2026-playlists",
     spotifyUrl: "https://open.spotify.com/artist/4VljXOkEAZ4EWzvbvJszyT",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb4de4f8ade09727b25001ba5a",
     checkedAt: "2026-08-18"
   },
   {
@@ -70,6 +74,7 @@ const ARTISTS = [
     source: "One Write Music (Substack) — 'For A Good Time - Call Reiko'",
     sourceUrl: "https://onewritemusic.substack.com/archive",
     spotifyUrl: "https://open.spotify.com/artist/1swF0fjO1rWmJEbygzTpf2",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb669c30994e62277c8a9b1d0d",
     checkedAt: "2026-08-18"
   },
   {
@@ -83,6 +88,7 @@ const ARTISTS = [
     source: "One Write Music (Substack) — 'Numb Before You Notice'",
     sourceUrl: "https://onewritemusic.substack.com/archive",
     spotifyUrl: "https://open.spotify.com/artist/0gdCxcoEObSShoJ3HayPnJ",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb7f7d777ff16f6d5c050ab72a",
     checkedAt: "2026-08-18"
   },
   {
@@ -96,6 +102,7 @@ const ARTISTS = [
     source: "One Write Music (Substack) — 'A Place Where Mountains Hide'",
     sourceUrl: "https://onewritemusic.substack.com/archive",
     spotifyUrl: "https://open.spotify.com/artist/5OeSHuvHTS9qUgAUTt3GIR",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb0e4f0c7f7c32a8edc705fb40",
     checkedAt: "2026-08-18"
   },
   {
@@ -109,6 +116,7 @@ const ARTISTS = [
     source: "One Write Music (Substack) — 'The Reckoning in Kate's Most Recent Release'",
     sourceUrl: "https://onewritemusic.substack.com/archive",
     spotifyUrl: "https://open.spotify.com/artist/5RAwXhLQfEX5khIsfnvDne",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebb3930c1a9e5df49bd6b4b9fe",
     checkedAt: "2026-08-18"
   },
   {
@@ -122,6 +130,7 @@ const ARTISTS = [
     source: "Hear Hear (Substack) — Essential Summer 2026 playlists",
     sourceUrl: "https://hearhear.substack.com/p/essential-summer-2026-playlists",
     spotifyUrl: "https://open.spotify.com/artist/5rxf4rjZ5lyhKt7DWM5dLL",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb66f6c3d26c8ce5f002722a70",
     checkedAt: "2026-08-18"
   },
   {
@@ -135,6 +144,7 @@ const ARTISTS = [
     source: "DIY Magazine — The Neu Bulletin",
     sourceUrl: "https://diymag.com/feature/the-neu-bulletin-sailor-honeymoon-the-cindys-june-mcdoom-and-more",
     spotifyUrl: "https://open.spotify.com/artist/6O0qcs3kv0stMY583BavCx",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb02975b492380d04f2322ec2f",
     checkedAt: "2026-08-18"
   },
   {
@@ -148,6 +158,7 @@ const ARTISTS = [
     source: "DIY Magazine — The Neu Bulletin",
     sourceUrl: "https://diymag.com/feature/the-neu-bulletin-sailor-honeymoon-the-cindys-june-mcdoom-and-more",
     spotifyUrl: "https://open.spotify.com/artist/1M0AUiCvSkRu9wBC3z2wBX",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eba20eda1e9f97f573a0112eed",
     checkedAt: "2026-08-18"
   },
   {
@@ -161,6 +172,7 @@ const ARTISTS = [
     source: "DIY Magazine — The Neu Bulletin",
     sourceUrl: "https://diymag.com/feature/the-neu-bulletin-theatre-essence-martins-chloe-slater-and-more",
     spotifyUrl: "https://open.spotify.com/artist/57HS6X4QpZkt1JeT7QpNcM",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb984707cc0a9282987e1ec036",
     checkedAt: "2026-08-18"
   },
   {
@@ -174,6 +186,7 @@ const ARTISTS = [
     source: "DIY Magazine — The Neu Bulletin / 'Get to Know...' feature",
     sourceUrl: "https://diymag.com/feature/the-neu-bulletin-theatre-essence-martins-chloe-slater-and-more",
     spotifyUrl: "https://open.spotify.com/artist/4DahLnNm7J5zRiQmiQeWec",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebcfdaf3c214013af2d4314172",
     checkedAt: "2026-08-18"
   },
   {
@@ -187,6 +200,7 @@ const ARTISTS = [
     source: "DIY Magazine — The Neu Bulletin",
     sourceUrl: "https://diymag.com/neu",
     spotifyUrl: "https://open.spotify.com/artist/3t0tkWfZvQbKkmji8oa26y",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb5f129328731d7cf876d5934c",
     checkedAt: "2026-08-18"
   },
   {
@@ -200,6 +214,7 @@ const ARTISTS = [
     source: "DIY Magazine — The Neu Bulletin",
     sourceUrl: "https://diymag.com/neu",
     spotifyUrl: "https://open.spotify.com/artist/7u56IQStytIQ51gm5haOeM",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb2781bf1212b1f3ad696f0c2b",
     checkedAt: "2026-08-18"
   },
   {
@@ -212,6 +227,8 @@ const ARTISTS = [
     signal: "London-born vocalist, multi-instrumentalist, and producer. Fully self-released.",
     source: "SongsBrew — RADAR",
     sourceUrl: "https://songsbrew.com/radar",
+    spotifyUrl: "https://open.spotify.com/artist/2bj1et4tfyc7fyorwk2257",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb094033301b67e58041d29849",
     checkedAt: "2026-08-19"
   },
   {
@@ -224,6 +241,8 @@ const ARTISTS = [
     signal: "Featured in Indie/Pop/Folk compilations by alexrainbirdMusic. Charming, self-taught singer-songwriter profile.",
     source: "SongsBrew — RADAR",
     sourceUrl: "https://songsbrew.com/radar",
+    spotifyUrl: "https://open.spotify.com/artist/6idlNQLvsjYJwQG4ojsmKK",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb51a9ca8724d6614a45b62fbe",
     checkedAt: "2026-08-19"
   },
   {
@@ -236,6 +255,8 @@ const ARTISTS = [
     signal: "London-based songwriter and producer. Playing tiny local venues (Morocco Bound, Bermondsey). About as pre-fame as it gets.",
     source: "SongsBrew — RADAR",
     sourceUrl: "https://songsbrew.com/radar",
+    spotifyUrl: "https://open.spotify.com/artist/7vx7q4XKpxkTILIC7dV3Gs",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5ebfbfac7c6b3b0e8ea27c972c2",
     checkedAt: "2026-08-19"
   },
   {
@@ -248,6 +269,8 @@ const ARTISTS = [
     signal: "Congolese/Lingala-language afro-pop. Bio references being name-checked by ROSALÍA. Very early stage.",
     source: "SongsBrew — RADAR",
     sourceUrl: "https://songsbrew.com/radar",
+    spotifyUrl: "https://open.spotify.com/artist/3cnjExpCt2Ev7qI4aBXRQl",
+    imageUrl: "https://i.scdn.co/image/ab6761610000e5eb6f4c576654e9df5ccb34ddb0",
     checkedAt: "2026-08-19"
   },
   {

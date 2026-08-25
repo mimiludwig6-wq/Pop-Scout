@@ -94,11 +94,13 @@ function renderResults() {
       const selected = shortlist.has(a.name);
       const spotifyUrl = a.spotifyUrl || `https://open.spotify.com/search/${encodeURIComponent(a.name)}`;
       const spotifyLabel = a.spotifyUrl ? "Spotify" : "Spotify (search)";
+      const badgeContent = a.imageUrl
+        ? `<img class="badge-img" src="${a.imageUrl}" alt="${a.name}" loading="lazy">`
+        : `<strong>${abbreviate(a.monthlyListeners)}</strong><span>Monthly</span>`;
       return `
         <article class="result-card">
           <div class="badge">
-            <strong>${abbreviate(a.monthlyListeners)}</strong>
-            <span>Monthly</span>
+            ${badgeContent}
           </div>
           <div class="card-body">
             <div class="card-top">
