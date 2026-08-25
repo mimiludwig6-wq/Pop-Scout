@@ -16,7 +16,7 @@ Artists are sorted into:
 - **Off genre** — doesn't fit pop regardless of size, kept for the record rather than deleted
 - **Unverified** — flagged by a source but not yet checked against Spotify
 
-As of the last update: 70 artists tracked, 19 qualifying, 45 established, 6 off genre, sourced from **14 outlets actively contributing data** (30 registered in total — see below for the 16 still to be mined). The dashboard's own "Sources" stat counts distinct outlets represented in the tracked data, so it only moves once a source has actually produced an artist.
+As of the last update: 70 artists tracked, 19 qualifying, 45 established, 6 off genre, across **29 registered sources** — 14 actively contributing artist data, plus the 15 below that are confirmed as real, on-topic sources but not yet mined.
 
 ## Sources
 
@@ -42,7 +42,8 @@ Instagram-based music discovery accounts identified as candidate sources. Bios c
 | [@offtherecordwisaiah](https://www.instagram.com/offtherecordwisaiah/) | "Off The Record w/ Isaiah" — LA-based music discovery personality |
 | [@listenwithdavid](https://www.instagram.com/listenwithdavid/) | Music discovery + physical media |
 | [@wsjuradio](https://www.instagram.com/wsjuradio/) | WSJU Radio — St. John's University college radio; weekly picks, artist radar |
-| [@thesongsbrew](https://www.instagram.com/thesongsbrew/) | SongsBrew — weekly music newsletter (RADAR / mixes / reviews), 1M+ reach in the last 12 months |
+
+*(@thesongsbrew isn't listed separately here — it's the same outlet as SongsBrew above, which is already active.)*
 
 ### Indie press & communities (added, not yet fully mined)
 

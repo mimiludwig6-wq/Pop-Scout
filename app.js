@@ -42,7 +42,8 @@ function renderStats() {
   const total = ARTISTS.length;
   const qualifies = ARTISTS.filter((a) => a.status === "qualifies").length;
   const unverified = ARTISTS.filter((a) => a.status === "unverified").length;
-  const sources = new Set(ARTISTS.map((a) => a.source)).size;
+  const activeSources = new Set(ARTISTS.map((a) => a.source)).size;
+  const sources = activeSources + REGISTERED_SOURCES.length;
 
   statsRow.innerHTML = `
     <div class="stat"><span class="stat-value">${total}</span><span class="stat-label">Tracked</span></div>

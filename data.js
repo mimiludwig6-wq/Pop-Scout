@@ -925,3 +925,25 @@ const ARTISTS = [
     checkedAt: "2026-08-18"
   }
 ];
+
+// Sources registered as candidates but not yet mined for artist data.
+// (SongsBrew is deliberately not repeated here — it's already one of the
+// 14 active outlets above via its RADAR series.) The dashboard's "Sources"
+// stat is: distinct outlets in ARTISTS + this list.
+const REGISTERED_SOURCES = [
+  { name: "music is to blame.", url: "https://www.instagram.com/musicistoblame/" },
+  { name: "Cassette Technologies", url: "https://www.instagram.com/cassette.tech/" },
+  { name: "grrrlmusic", url: "https://www.instagram.com/grrrlmusic/" },
+  { name: "Who Is Blank", url: "https://www.instagram.com/whoisblankblog/" },
+  { name: "Salt Lick Incubator", url: "https://www.instagram.com/salt_lick_incubator/" },
+  { name: "Off The Record w/ Isaiah", url: "https://www.instagram.com/offtherecordwisaiah/" },
+  { name: "LISTENWITHDAVID", url: "https://www.instagram.com/listenwithdavid/" },
+  { name: "WSJU Radio", url: "https://www.instagram.com/wsjuradio/" },
+  { name: "Indie Music News", url: "https://indiemusic.news" },
+  { name: "Under the Radar", url: "https://www.undertheradarmag.com" },
+  { name: "r/indieheads", url: "https://www.reddit.com/r/indieheads/" },
+  { name: "Stereogum", url: "https://stereogum.com" },
+  { name: "Indie Shuffle", url: "https://www.indieshuffle.com" },
+  { name: "IndiePulse Music", url: "https://indiepulsemusic.com" },
+  { name: "The Indie Scene", url: "https://www.theindiescene.co.uk" }
+];
