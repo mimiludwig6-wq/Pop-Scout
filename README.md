@@ -27,6 +27,34 @@ Compiled from public trade press, editorial "artists to watch" features, and —
 - **Notion Magazine**'s weekly Undiscovered series
 - Spotify's own public artist pages (checked logged-out) for the actual listener/stream numbers
 
+### Social / curator accounts (added, not yet fully mined)
+
+Instagram-based music discovery accounts identified as candidate sources. Bios confirmed; artist-level scouting from these hasn't been done yet.
+
+| Account | What it is |
+|---|---|
+| [@musicistoblame](https://www.instagram.com/musicistoblame/) | "music is to blame." — indie music zine/magazine, platform for under-represented artists |
+| [@cassette.tech](https://www.instagram.com/cassette.tech/) | Cassette Technologies — music-sharing platform with playlist & curator spotlights |
+| [@grrrlmusic](https://www.instagram.com/grrrlmusic/) | Music discovery curators (Kelsey + Ashley); also runs @grrrlmusicdoesdistro |
+| [@whoisblankblog](https://www.instagram.com/whoisblankblog/) | "Who Is Blank" — explicitly pop/indie emerging-artist spotlight blog |
+| [@salt_lick_incubator](https://www.instagram.com/salt_lick_incubator/) | Salt Lick Incubator — nonprofit artist incubator (already the source for Carter Benjamin) |
+| [@offtherecordwisaiah](https://www.instagram.com/offtherecordwisaiah/) | "Off The Record w/ Isaiah" — LA-based music discovery personality |
+| [@listenwithdavid](https://www.instagram.com/listenwithdavid/) | Music discovery + physical media |
+| [@wsjuradio](https://www.instagram.com/wsjuradio/) | WSJU Radio — St. John's University college radio; weekly picks, artist radar |
+| [@thesongsbrew](https://www.instagram.com/thesongsbrew/) | SongsBrew — weekly music newsletter (RADAR / mixes / reviews), 1M+ reach in the last 12 months |
+
+### Indie press & communities (added, not yet fully mined)
+
+| Source | What it is |
+|---|---|
+| [Indie Music News](https://indiemusic.news) | Indie music directory/news site — reviews and coverage across rock, pop, electronic, hip-hop, folk |
+| [Under the Radar](https://www.undertheradarmag.com) | Long-running indie music magazine (founded 2001) — broke Fleet Foxes and Vampire Weekend before mainstream press |
+| [r/indieheads](https://www.reddit.com/r/indieheads/) | 2M+ member Reddit community, influential enough that publications cite it as a source; artists do AMAs there |
+| [Stereogum](https://stereogum.com) | Established indie music blog, runs a regular "Band to Watch" column |
+| [Indie Shuffle](https://www.indieshuffle.com) | Music discovery/curation site across indie rock, electronic, pop |
+| [IndiePulse Music](https://indiepulsemusic.com) | Indie music magazine + record label for unsigned artists, reviews/interviews/news |
+| [The Indie Scene](https://www.theindiescene.co.uk) | UK music journalism site — interviews, reviews, curated playlists |
+
 Not a live feed yet — every number is a manually verified snapshot with a checked-at date. The plan is to wire this to a real API backend for continuous, automatically refreshing coverage.
 
 ## Running it locally
