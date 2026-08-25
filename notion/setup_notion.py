@@ -174,6 +174,8 @@ artists_db = call("POST", "/databases", {
         "Monthly Listeners": {"number": {"format": "number"}},
         "Top Track": {"rich_text": {}},
         "Top Track Streams": {"number": {"format": "number"}},
+        "Followers": {"number": {"format": "number"}},
+        "Popularity": {"number": {"format": "number"}},
         "Meets Criteria": {"formula": {"expression": FORMULA}},
         "Signal": {"rich_text": {}},
         "Source": {"relation": {"database_id": SOURCES_ID,

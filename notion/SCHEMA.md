@@ -23,6 +23,8 @@ self-computing instead of a hardcoded number.
 | **Spotify URL** | URL | |
 | **Spotify Artist ID** | Text | Bare ID. Required for any automated refresh. |
 | **Image URL** | URL | Spotify `og:image`. |
+| **Followers** | Number (plain) | Spotify follower count. Auto-refreshed by the cron job. |
+| **Popularity** | Number (plain) | Spotify's 0–100 score. Auto-refreshed. Not the same as listeners — see note below. |
 | **Checked At** | Date | When a human last verified the numbers. |
 | **Last Synced** | Date | When automation last refreshed them. Diverges from Checked At once a cron job exists. |
 | **Shortlisted** | Checkbox | |
@@ -75,6 +77,27 @@ flags drift the moment it happens instead of on the next manual audit.
 | **Qualifiers Found** | Rollup | `Artists` → `Meets Criteria` → Count matching `✅ Qualifies`. The real hit-rate signal. |
 | **Last Mined** | Date | |
 | **Notes** | Text | Including why a Dead End was ruled out — JV Agency, for example. |
+
+---
+
+### What can and can't refresh automatically
+
+Worth being clear about, because it shapes the whole app: **Spotify's official Web API
+does not expose monthly listeners or per-track play counts.** It gives followers, a
+0–100 popularity score, genres, and images. Monthly listeners live only on the public
+artist page and in Spotify for Artists.
+
+So the split is:
+
+| Field | How it updates |
+|---|---|
+| Followers, Popularity, Image URL | Cron job, hourly, via the official API |
+| Monthly Listeners, Top Track Streams | Human-verified, stamped with `Checked At` |
+
+Popularity is a reasonable momentum signal — it moves when an artist starts breaking —
+but it is *not* a listener count and the dashboard shouldn't imply it is. Getting real
+monthly-listener data on a schedule means a paid vendor (Songstats, Chartmetric), which
+is a later decision, not a blocker.
 
 ---
 
