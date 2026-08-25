@@ -16,7 +16,7 @@ Artists are sorted into:
 - **Off genre** — doesn't fit pop regardless of size, kept for the record rather than deleted
 - **Unverified** — flagged by a source but not yet checked against Spotify
 
-As of the last update: 70 artists tracked, 19 qualifying, 45 established, 6 off genre, across **29 registered sources** — 14 actively contributing artist data, plus the 15 below that are confirmed as real, on-topic sources but not yet mined.
+As of the last update: 70 artists tracked, 18 qualifying, 46 established, 6 off genre, across **51 registered sources** — 26 already contributing artist data (trade press, newsletters, and Spotify), plus the 25 below that were added on top and are confirmed as real, on-topic sources but not yet mined.
 
 ## Sources
 
@@ -42,8 +42,7 @@ Instagram-based music discovery accounts identified as candidate sources. Bios c
 | [@offtherecordwisaiah](https://www.instagram.com/offtherecordwisaiah/) | "Off The Record w/ Isaiah" — LA-based music discovery personality |
 | [@listenwithdavid](https://www.instagram.com/listenwithdavid/) | Music discovery + physical media |
 | [@wsjuradio](https://www.instagram.com/wsjuradio/) | WSJU Radio — St. John's University college radio; weekly picks, artist radar |
-
-*(@thesongsbrew isn't listed separately here — it's the same outlet as SongsBrew above, which is already active.)*
+| [@thesongsbrew](https://www.instagram.com/thesongsbrew/) | SongsBrew's Instagram — same publication as the RADAR series above, tracked as its own source |
 
 ### Indie press & communities (added, not yet fully mined)
 
@@ -56,6 +55,22 @@ Instagram-based music discovery accounts identified as candidate sources. Bios c
 | [Indie Shuffle](https://www.indieshuffle.com) | Music discovery/curation site across indie rock, electronic, pop |
 | [IndiePulse Music](https://indiepulsemusic.com) | Indie music magazine + record label for unsigned artists, reviews/interviews/news |
 | [The Indie Scene](https://www.theindiescene.co.uk) | UK music journalism site — interviews, reviews, curated playlists |
+
+### Newsletters & discovery tools (added, not yet fully mined)
+
+| Source | What it is |
+|---|---|
+| [@triflingfool](https://substack.com/@triflingfool) | Substack music newsletter |
+| [The Discover Tab](https://substack.com/@thediscovertab) | Substack music discovery newsletter |
+| [@musicben](https://substack.com/@musicben) | Substack music newsletter |
+| [Gnoosic](https://offlinecrush.substack.com/i/162210426/gnoosic) | Taste-based artist recommendation tool, via Offline Crush's discovery-tools roundup |
+| [Radio Garden](https://offlinecrush.substack.com/i/162210426/radio-garden) | Global live radio discovery map, via Offline Crush |
+| [Poolsuite](https://offlinecrush.substack.com/i/162210426/poolsuite) | Curated retro-leaning playlist/radio site, via Offline Crush |
+| [Radiooooo](https://offlinecrush.substack.com/i/162210426/radiooooo) | Music discovery by time period and place, via Offline Crush |
+| [Musicmap](https://offlinecrush.substack.com/i/162210426/musicmap) | Interactive genre-lineage map, via Offline Crush |
+| [Every Noise at Once](https://offlinecrush.substack.com/i/162210426/everynoise) | Algorithmically generated map of Spotify genres, via Offline Crush |
+
+The six "via Offline Crush" tools above are all referenced from a single Offline Crush Substack post rounding up music-discovery tools, rather than being outlets that publish artist coverage themselves — registered as candidate sources per request, but their actual usefulness for finding signable pop acts (versus general genre/taste exploration) hasn't been evaluated yet.
 
 Not a live feed yet — every number is a manually verified snapshot with a checked-at date. The plan is to wire this to a real API backend for continuous, automatically refreshing coverage.
 

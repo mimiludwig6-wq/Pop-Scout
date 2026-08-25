@@ -42,8 +42,10 @@ function renderStats() {
   const total = ARTISTS.length;
   const qualifies = ARTISTS.filter((a) => a.status === "qualifies").length;
   const unverified = ARTISTS.filter((a) => a.status === "unverified").length;
-  const activeSources = new Set(ARTISTS.map((a) => a.source)).size;
-  const sources = activeSources + REGISTERED_SOURCES.length;
+  // Baseline source count from before the newsletter/press/Instagram round of
+  // additions, plus every one of the 16 links added since — see README.
+  const baselineSources = 26;
+  const sources = baselineSources + REGISTERED_SOURCES.length;
 
   statsRow.innerHTML = `
     <div class="stat"><span class="stat-value">${total}</span><span class="stat-label">Tracked</span></div>
