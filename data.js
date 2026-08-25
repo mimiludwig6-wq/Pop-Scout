@@ -202,6 +202,90 @@ const ARTISTS = [
     spotifyUrl: "https://open.spotify.com/artist/7u56IQStytIQ51gm5haOeM",
     checkedAt: "2026-08-18"
   },
+  {
+    name: "Lucas Geddes",
+    genre: "Pop / R&B",
+    monthlyListeners: 12804,
+    topTrackStreams: 881293,
+    topTrack: "Can't Get Over",
+    status: "qualifies",
+    signal: "London-born vocalist, multi-instrumentalist, and producer. Fully self-released.",
+    source: "SongsBrew — RADAR",
+    sourceUrl: "https://songsbrew.com/radar",
+    checkedAt: "2026-08-19"
+  },
+  {
+    name: "Fran Lusty",
+    genre: "Folk-Pop",
+    monthlyListeners: 3973,
+    topTrackStreams: 429341,
+    topTrack: "Brother",
+    status: "qualifies",
+    signal: "Featured in Indie/Pop/Folk compilations by alexrainbirdMusic. Charming, self-taught singer-songwriter profile.",
+    source: "SongsBrew — RADAR",
+    sourceUrl: "https://songsbrew.com/radar",
+    checkedAt: "2026-08-19"
+  },
+  {
+    name: "False Idah",
+    genre: "Alt-Pop",
+    monthlyListeners: 248,
+    topTrackStreams: 9713,
+    topTrack: "Conditions",
+    status: "qualifies",
+    signal: "London-based songwriter and producer. Playing tiny local venues (Morocco Bound, Bermondsey). About as pre-fame as it gets.",
+    source: "SongsBrew — RADAR",
+    sourceUrl: "https://songsbrew.com/radar",
+    checkedAt: "2026-08-19"
+  },
+  {
+    name: "Lagrace",
+    genre: "Afro-Pop",
+    monthlyListeners: 5073,
+    topTrackStreams: 637866,
+    topTrack: "Kombo Mabé",
+    status: "qualifies",
+    signal: "Congolese/Lingala-language afro-pop. Bio references being name-checked by ROSALÍA. Very early stage.",
+    source: "SongsBrew — RADAR",
+    sourceUrl: "https://songsbrew.com/radar",
+    checkedAt: "2026-08-19"
+  },
+  {
+    name: "Seago",
+    genre: "Alt-Pop",
+    monthlyListeners: 44323,
+    topTrackStreams: 2148915,
+    topTrack: "Cheapshot",
+    status: "established",
+    signal: "44K monthly listeners (would qualify) but top track has 2.1M streams — over the cap. Featured on Pigeons & Planes 'Fresh Finds: Class of 2023.'",
+    source: "SongsBrew — RADAR",
+    sourceUrl: "https://songsbrew.com/radar",
+    checkedAt: "2026-08-19"
+  },
+  {
+    name: "kerri",
+    genre: "Alt-Pop",
+    monthlyListeners: 83380,
+    topTrackStreams: 4112316,
+    topTrack: "dead / gone",
+    status: "established",
+    signal: "83K monthly listeners (would qualify) but top track has 4.1M streams — over the cap.",
+    source: "SongsBrew — RADAR",
+    sourceUrl: "https://songsbrew.com/radar",
+    checkedAt: "2026-08-19"
+  },
+  {
+    name: "emma who?",
+    genre: "Pop",
+    monthlyListeners: 195676,
+    topTrackStreams: 1823643,
+    topTrack: "Hollow",
+    status: "established",
+    signal: "196K monthly listeners, top track 1.8M streams.",
+    source: "SongsBrew — RADAR",
+    sourceUrl: "https://songsbrew.com/radar",
+    checkedAt: "2026-08-19"
+  },
 
   // ---- Established: monthly listeners under 100K, but top track exceeds 1M streams ----
   {

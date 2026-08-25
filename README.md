@@ -16,7 +16,7 @@ Artists are sorted into:
 - **Off genre** — doesn't fit pop regardless of size, kept for the record rather than deleted
 - **Unverified** — flagged by a source but not yet checked against Spotify
 
-As of the last update: 63 artists tracked, 15 qualifying, 42 established, 6 off genre, across 25 distinct sources.
+As of the last update: 70 artists tracked, 19 qualifying, 45 established, 6 off genre, across 26 distinct sources.
 
 ## Sources
 
@@ -25,6 +25,7 @@ Compiled from public trade press, editorial "artists to watch" features, and —
 - **Hear Hear** (Substack) and **One Write Music** (Substack) — full archives reviewed
 - **DIY Magazine**'s weekly Neu Bulletin
 - **Notion Magazine**'s weekly Undiscovered series
+- **SongsBrew**'s RADAR series (songsbrew.com/radar) — weekly submission-based artist mixes; strong hit rate (4 qualifiers found from one pass through the recent archive)
 - Spotify's own public artist pages (checked logged-out) for the actual listener/stream numbers
 
 ### Social / curator accounts (added, not yet fully mined)
