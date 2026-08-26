@@ -4,6 +4,20 @@ Two related databases. `Artists` is the working roster; `Sources` is the scoutin
 pipeline that feeds it. The relation between them is what makes the "Sources" stat
 self-computing instead of a hardcoded number.
 
+## These are already live
+
+Both databases exist in **Mimi Ludwig's Space**, under the
+[Pop Scout](https://app.notion.com/p/3c798763537a81ef8474ca5532f15a72) page, populated
+with all 70 artists and 39 sources:
+
+| Database | Page | Database ID (for `.env.local`) |
+|---|---|---|
+| [Pop Scout — Artists](https://app.notion.com/p/efb31334a08d4de4856ffff7f8cd160d) | 70 rows | `efb31334-a08d-4de4-856f-fff7f8cd160d` |
+| [Pop Scout — Sources](https://app.notion.com/p/3ecb4f5d0ba74b7fa5bb26146fd3cd79) | 39 rows | `3ecb4f5d-0ba7-4b7f-a5bb-26146fd3cd79` |
+
+`setup_notion.py` in this directory rebuilds them from the CSVs if you ever need a
+fresh copy in another workspace. You don't need to run it for the existing ones.
+
 ---
 
 ## Database 1 — `Pop Scout — Artists`
@@ -40,11 +54,11 @@ self-computing instead of a hardcoded number.
 ```
 if(
   empty(prop("Monthly Listeners")) or empty(prop("Top Track Streams")),
-  "⚠️ Incomplete",
+  "Incomplete",
   if(
     prop("Monthly Listeners") < 100000 and prop("Top Track Streams") < 1000000,
-    "✅ Qualifies",
-    "📈 Over cap"
+    "Qualifies",
+    "Over cap"
   )
 )
 ```
@@ -72,11 +86,15 @@ flags drift the moment it happens instead of on the next manual audit.
 | **Type** | Select | `Newsletter` · `Instagram` · `Press` · `Community` · `Radio` · `Discovery Tool` · `Trade` |
 | **Status** | Select | `Active` (has produced artists) · `Registered` (confirmed real, not yet mined) · `Dead End` |
 | **Cadence** | Select | `Weekly` · `Monthly` · `Annual` · `Continuous` — weekly sources are the ones worth a standing habit. |
-| **Artists** | Relation → `Artists` | Reverse side of the Artists relation. |
-| **Artists Found** | Rollup | `Artists` → `Count`. |
-| **Qualifiers Found** | Rollup | `Artists` → `Meets Criteria` → Count matching `✅ Qualifies`. The real hit-rate signal. |
+| **Artists** | Relation → `Artists` | Reverse side of the Artists relation. Already populated. |
+| **Artists Found** | Rollup | `Artists` → `Count`. Already created. |
 | **Last Mined** | Date | |
 | **Notes** | Text | Including why a Dead End was ruled out — JV Agency, for example. |
+
+**Still worth adding by hand:** a `Qualifiers Found` rollup — `Artists` → `Meets
+Criteria` → Count, filtered to `Qualifies`. Filtered rollups are a UI-only feature,
+and it's the single most useful number here: it ranks sources by how many genuinely
+signable artists they produced, not just how many names they threw out.
 
 ---
 
@@ -115,9 +133,9 @@ ranking is a genuinely good thing to be able to show in an interview.
 
 ---
 
-## Import
+## Rebuilding elsewhere
 
-`artists.csv` (70 rows) and `sources.csv` (39 rows) import straight into Notion, but
-CSV import types every column as Text. Either fix the types in the UI afterward using
-the tables above, or run `setup_notion.py`, which creates both databases with the
-correct types and relations already in place.
+The CSVs here (`artists.csv`, `sources.csv`) are the portable copy of the data. Notion's
+own CSV import types every column as Text, so prefer `setup_notion.py` — it creates both
+databases with correct types and the relation already wired, then imports every row. It
+needs its own integration token; see the docstring at the top of that file.

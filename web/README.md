@@ -54,19 +54,22 @@ Requires Node 18.18+. If `node --version` fails, install the macOS `.pkg` from
 
 ### 2. Notion
 
-From the repo root:
+**The databases already exist** in Mimi Ludwig's Space, under the
+[Pop Scout](https://app.notion.com/p/3c798763537a81ef8474ca5532f15a72) page, fully
+populated. You just need their IDs and a token:
 
-```bash
-export NOTION_TOKEN=ntn_xxxxx
-export NOTION_PARENT_PAGE_ID=xxxxx
-python3 notion/setup_notion.py
+```
+NOTION_ARTISTS_DB=efb31334-a08d-4de4-856f-fff7f8cd160d
+NOTION_SOURCES_DB=3ecb4f5d-0ba7-4b7f-a5bb-26146fd3cd79
 ```
 
-That creates both databases with correct property types and imports all 70
-artists and 39 sources. It prints the two database IDs at the end.
+For `NOTION_TOKEN`, create an integration at
+[notion.so/my-integrations](https://www.notion.so/my-integrations), then open each
+database → `•••` → **Connections** → add it. Without that step the app gets a 404 and
+the page will tell you so.
 
-Then add the two rollups on the Sources database by hand — the Notion API can't
-create rollups. Settings are in [`../notion/SCHEMA.md`](../notion/SCHEMA.md).
+To rebuild the databases from scratch somewhere else, see
+[`../notion/SCHEMA.md`](../notion/SCHEMA.md).
 
 ### 3. Spotify
 
