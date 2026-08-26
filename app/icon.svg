@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="12" fill="#16171a"/>
+  <!-- Heavy P echoing the site wordmark. Drawn as a path rather than <text>
+       so it renders identically everywhere — favicon SVGs can't rely on a
+       webfont being loaded, and system fallbacks vary too much in weight. -->
+  <path fill="#f6f3ec" d="M18 12h16.5c9.1 0 15.5 5.6 15.5 14.2 0 8.7-6.4 14.3-15.5 14.3H28V52H18V12zm10 9.2v10.1h5.6c3.6 0 5.9-2 5.9-5.1 0-3-2.3-5-5.9-5H28z"/>
+</svg>
