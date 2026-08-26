@@ -155,15 +155,15 @@ main {
 /* ---------- Statement ---------- */
 
 .statement {
-  padding: var(--space-16) 0;
+  padding: var(--space-10) 0;
 }
 
 .statement h2 {
   margin: 0;
   font-weight: 900;
-  font-size: clamp(56px, 9vw, 128px);
-  line-height: 0.92;
-  letter-spacing: -0.03em;
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
 }
 
 /* ---------- Workspace ---------- */
@@ -516,26 +516,6 @@ footer p {
 
 /* ---------- Added for the Notion-backed build ---------- */
 
-.pop-meter {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.pop-bar {
-  width: 46px;
-  height: 4px;
-  border-radius: 999px;
-  background: var(--line);
-  overflow: hidden;
-}
-
-.pop-bar span {
-  display: block;
-  height: 100%;
-  background: var(--ink);
-}
-
 .error-panel {
   margin: var(--space-10) 0;
   padding: var(--space-8);
@@ -566,4 +546,27 @@ footer p {
   white-space: pre-wrap;
   word-break: break-word;
   color: var(--muted);
+}
+
+/* ---------- Recently-added affordances ---------- */
+
+.pill.new {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.pill.new::before { background: var(--paper); }
+
+.btn-count {
+  float: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  opacity: 0.55;
+}
+
+.status-btn.active .btn-count { opacity: 0.75; }
+
+.card-added {
+  color: var(--muted);
+  font-size: 11px;
 }

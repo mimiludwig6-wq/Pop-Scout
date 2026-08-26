@@ -35,12 +35,9 @@ fresh copy in another workspace. You don't need to run it for the existing ones.
 | **Source** | Relation → `Sources` | Where the artist came from. Drives the Sources rollup. |
 | **Source URL** | URL | Direct link to the specific article/post. |
 | **Spotify URL** | URL | |
-| **Spotify Artist ID** | Text | Bare ID. Required for any automated refresh. |
+| **Spotify Artist ID** | Text | Bare ID. The refresh workflow navigates straight to `open.spotify.com/artist/<id>` with it. |
 | **Image URL** | URL | Spotify `og:image`. |
-| **Followers** | Number (plain) | Spotify follower count. Auto-refreshed by the cron job. |
-| **Popularity** | Number (plain) | Spotify's 0–100 score. Auto-refreshed. Not the same as listeners — see note below. |
-| **Checked At** | Date | When a human last verified the numbers. |
-| **Last Synced** | Date | When automation last refreshed them. Diverges from Checked At once a cron job exists. |
+| **Checked At** | Date | When the numbers were last verified against Spotify's public artist page. |
 | **Shortlisted** | Checkbox | |
 | **Priority** | Select | `High` · `Medium` · `Low` |
 | **Rep Status** | Select | `Unrepresented` · `Has Booking` · `Has Label` · `Has Mgmt` · `Unknown` — the field that decides whether an artist is actually approachable. |
@@ -63,15 +60,17 @@ if(
 )
 ```
 
-This is worth having: it's exactly the check that caught Dottie Andersson sitting in
-`Qualifies` with a 2.69M-stream top track. Once numbers refresh automatically, this
-flags drift the moment it happens instead of on the next manual audit.
+Worth having: this is the check that caught Dottie Andersson sitting in `Qualifies`
+with a 2.69M-stream top track, and later Eileen Alister, AmiiFy and Lauren Auder —
+all three recorded against a well-known single rather than their most-played track.
+The formula re-evaluates the moment a number is edited, so drift surfaces on the
+spot rather than at the next audit.
 
 ### Recommended views
 
 - **Board by Status** — the default working view.
 - **Qualifies** — filter `Status = Qualifies`, sort Monthly Listeners ascending.
-- **Needs review** — filter `Meets Criteria != "✅ Qualifies"` AND `Status = Qualifies`. Should always be empty; if it isn't, something drifted.
+- **Needs review** — filter `Meets Criteria != "Qualifies"` AND `Status = Qualifies`. Should always be empty; if it isn't, something drifted.
 - **Stale** — filter `Checked At` before 30 days ago. The re-verification queue.
 - **Shortlist** — filter `Shortlisted = checked`, grouped by Priority.
 
@@ -98,35 +97,26 @@ signable artists they produced, not just how many names they threw out.
 
 ---
 
-### What can and can't refresh automatically
+### Why there is no automated refresh
 
-Worth being clear about, because it shapes the whole app: **Spotify's official Web API
-does not expose monthly listeners or per-track play counts.** It gives followers, a
-0–100 popularity score, genres, and images. Monthly listeners live only on the public
-artist page and in Spotify for Artists.
+Spotify's Web API exposes neither monthly listeners nor per-track play counts —
+the two numbers the whole filter rests on. It offers followers, a 0–100
+popularity score, genres and images, none of which answer whether an artist is
+small enough to sign, and it gates access on the app owner holding Premium.
 
-So the split is:
-
-| Field | How it updates |
-|---|---|
-| Followers, Popularity, Image URL | Cron job, hourly, via the official API |
-| Monthly Listeners, Top Track Streams | Human-verified, stamped with `Checked At` |
-
-Popularity is a reasonable momentum signal — it moves when an artist starts breaking —
-but it is *not* a listener count and the dashboard shouldn't imply it is. Getting real
-monthly-listener data on a schedule means a paid vendor (Songstats, Chartmetric), which
-is a later decision, not a blocker.
+An API integration was built and then removed rather than left dormant returning
+data nobody needed. `Checked At` is therefore the only freshness signal, and the
+`refresh-roster` skill is how it gets updated.
 
 ---
 
-## One thing this changes
+## Why the relation matters
 
-Right now the dashboard's Sources stat is a hardcoded baseline (`26`) plus the length
-of the registered list. Once Sources is a real database, the number becomes a live
-count of rows — currently **39** (14 Active + 25 Registered), and it goes up on its own
-every time you add a source.
+The dashboard's Sources stat is a live count of rows in this database — currently
+**39** (14 Active + 25 Registered) — so it climbs on its own as sources are added,
+rather than being a number someone has to remember to update.
 
-The `Qualifiers Found` rollup is the more interesting number, though: it tells you
+The `Qualifiers Found` rollup is the more interesting one, though: it tells you
 which sources are actually worth your time. SongsBrew's RADAR series produced 4
 qualifiers in one pass; most annual "artists to watch" lists produced zero. That
 ranking is a genuinely good thing to be able to show in an interview.

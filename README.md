@@ -82,9 +82,14 @@ The six "via Offline Crush" tools above are all referenced from a single Offline
 
 The roster lives in Notion and the site reads it at request time, so editing a row changes the site without a redeploy.
 
-Listener and stream counts are **verified by hand**, each stamped with the date it was checked. That isn't a shortcut — Spotify's Web API exposes neither monthly listeners nor per-track play counts, so no amount of API access would supply them. Both numbers exist only on the public artist page. `.claude/skills/refresh-roster/` documents the re-checking workflow, including the two things that make it fragile: the play-count column renders only above ~1500px viewport width, and Spotify's "Popular" list is ordered by its own ranking rather than by plays, so the first track shown is frequently not the most-played one.
+Listener and stream counts are **verified by hand** against Spotify's public artist pages, each stamped with the date it was checked. That's deliberate rather than a shortcut: Spotify's Web API exposes neither monthly listeners nor per-track play counts, so an API integration could not supply the two numbers this entire filter rests on. Both exist only on the public artist page.
 
-A daily job is wired up to refresh what the API *does* serve — followers, popularity, artist images — but Spotify gates Web API access on the app owner holding Premium, so it stays dormant until that's in place. Getting real monthly-listener data on a schedule would mean a paid vendor such as Songstats or Chartmetric.
+Re-checking is a documented workflow — [`.claude/skills/refresh-roster/`](.claude/skills/refresh-roster/SKILL.md) — covering the parts that are easy to get wrong:
+
+- The play-count column renders only above ~1500px viewport width, and only in a foregrounded tab. Narrower or backgrounded, the page silently shows track durations instead.
+- Spotify's "Popular" list is ordered by its own ranking, not by plays, so **the first track shown is frequently not the most-played one**. Reading it as the top track is what put three artists in the qualifying list who were several million streams over the cap.
+
+Getting these numbers on a schedule would mean a paid vendor such as Songstats or Chartmetric, which is the natural next step if this ever needed to scale past manual re-checks.
 
 ## Running it locally
 

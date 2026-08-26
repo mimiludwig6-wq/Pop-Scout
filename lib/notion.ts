@@ -15,8 +15,6 @@ export type Artist = {
   monthlyListeners: number | null;
   topTrack: string;
   topTrackStreams: number | null;
-  followers: number | null;
-  popularity: number | null;
   signal: string;
   source: string;
   sourceUrl: string;
@@ -24,7 +22,7 @@ export type Artist = {
   spotifyArtistId: string;
   imageUrl: string;
   checkedAt: string | null;
-  lastSynced: string | null;
+  added: string | null;
   shortlisted: boolean;
   priority: string;
   repStatus: string;
@@ -46,7 +44,7 @@ function requireEnv(name: string): string {
   const v = process.env[name];
   if (!v) {
     throw new Error(
-      `Missing ${name}. Copy web/.env.example to web/.env.local and fill it in ` +
+      `Missing ${name}. Copy .env.example to .env.local and fill it in ` +
         `(or set it in the Vercel project's Environment Variables).`
     );
   }
@@ -141,8 +139,6 @@ async function fetchArtists(sources: Source[]): Promise<Artist[]> {
       monthlyListeners: pNum(p["Monthly Listeners"]),
       topTrack: pText(p["Top Track"]),
       topTrackStreams: pNum(p["Top Track Streams"]),
-      followers: pNum(p["Followers"]),
-      popularity: pNum(p["Popularity"]),
       signal: pText(p["Signal"]),
       source: (relId && sourceName.get(relId)) || "",
       sourceUrl: pUrl(p["Source URL"]),
@@ -150,7 +146,7 @@ async function fetchArtists(sources: Source[]): Promise<Artist[]> {
       spotifyArtistId: pText(p["Spotify Artist ID"]),
       imageUrl: pUrl(p["Image URL"]),
       checkedAt: pDate(p["Checked At"]),
-      lastSynced: pDate(p["Last Synced"]),
+      added: pDate(p["Added"]),
       shortlisted: pCheck(p["Shortlisted"]),
       priority: pSelect(p["Priority"]),
       repStatus: pSelect(p["Rep Status"]),
@@ -180,48 +176,3 @@ export const getRoster = unstable_cache(
   ["pop-scout-roster"],
   { revalidate: 3600, tags: [CACHE_TAG] }
 );
-
-// --- writes (used by the refresh cron) ------------------------------------
-
-export async function listArtistsForSync(): Promise<
-  { pageId: string; spotifyArtistId: string }[]
-> {
-  const pages = await queryAll(requireEnv("NOTION_ARTISTS_DB"));
-
-  return pages
-    .map((page) => ({
-      pageId: page.id as string,
-      spotifyArtistId: pText(page.properties?.["Spotify Artist ID"]),
-    }))
-    .filter((a) => a.spotifyArtistId.length > 0);
-}
-
-export async function updateArtistMetrics(
-  pageId: string,
-  metrics: { followers: number; popularity: number; imageUrl?: string }
-) {
-  const properties: Record<string, unknown> = {
-    Followers: { number: metrics.followers },
-    Popularity: { number: metrics.popularity },
-    "Last Synced": { date: { start: new Date().toISOString().slice(0, 10) } },
-  };
-
-  if (metrics.imageUrl) {
-    properties["Image URL"] = { url: metrics.imageUrl };
-  }
-
-  const res = await fetch(`${API}/pages/${pageId}`, {
-    method: "PATCH",
-    headers: {
-      Authorization: `Bearer ${requireEnv("NOTION_TOKEN")}`,
-      "Notion-Version": VERSION,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ properties }),
-    cache: "no-store",
-  });
-
-  if (!res.ok) {
-    throw new Error(`Notion ${res.status} updating ${pageId}: ${await res.text()}`);
-  }
-}

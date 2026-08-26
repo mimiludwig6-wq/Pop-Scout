@@ -159,9 +159,9 @@ GENRES = sorted({
 
 FORMULA = (
     'if(empty(prop("Monthly Listeners")) or empty(prop("Top Track Streams")), '
-    '"⚠️ Incomplete", '
+    '"Incomplete", '
     'if(prop("Monthly Listeners") < 100000 and prop("Top Track Streams") < 1000000, '
-    '"✅ Qualifies", "📈 Over cap"))'
+    '"Qualifies", "Over cap"))'
 )
 
 artists_db = call("POST", "/databases", {
@@ -174,8 +174,6 @@ artists_db = call("POST", "/databases", {
         "Monthly Listeners": {"number": {"format": "number"}},
         "Top Track": {"rich_text": {}},
         "Top Track Streams": {"number": {"format": "number"}},
-        "Followers": {"number": {"format": "number"}},
-        "Popularity": {"number": {"format": "number"}},
         "Meets Criteria": {"formula": {"expression": FORMULA}},
         "Signal": {"rich_text": {}},
         "Source": {"relation": {"database_id": SOURCES_ID,
@@ -186,7 +184,6 @@ artists_db = call("POST", "/databases", {
         "Spotify Artist ID": {"rich_text": {}},
         "Image URL": {"url": {}},
         "Checked At": {"date": {}},
-        "Last Synced": {"date": {}},
         "Shortlisted": {"checkbox": {}},
         "Priority": select("High", "Medium", "Low"),
         "Rep Status": select("Unrepresented", "Has Booking", "Has Label",

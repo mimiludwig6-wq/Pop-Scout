@@ -26,6 +26,21 @@ function abbreviate(n: number | null): string {
 /** "Off Genre" -> "off_genre", matching the pill classes in globals.css. */
 const statusClass = (status: Status) => status.toLowerCase().replace(/\s+/g, "_");
 
+const DAY = 86_400_000;
+
+/** Whole days since an ISO date, or null if there isn't one. */
+function daysSince(iso: string | null): number | null {
+  if (!iso) return null;
+  const then = Date.parse(iso);
+  if (Number.isNaN(then)) return null;
+  return Math.floor((Date.now() - then) / DAY);
+}
+
+const isRecent = (iso: string | null) => {
+  const d = daysSince(iso);
+  return d !== null && d <= 7;
+};
+
 export default function Dashboard({
   artists,
   sources,
@@ -37,6 +52,7 @@ export default function Dashboard({
   const [status, setStatus] = useState<Status | "all">("Qualifies");
   const [listenerCap, setListenerCap] = useState("");
   const [sortBy, setSortBy] = useState("listeners-asc");
+  const [recentOnly, setRecentOnly] = useState(false);
   const [shortlist, setShortlist] = useState<Set<string>>(new Set());
   const [copyStatus, setCopyStatus] = useState("");
 
@@ -55,6 +71,8 @@ export default function Dashboard({
     let out = artists.slice();
 
     if (status !== "all") out = out.filter((a) => a.status === status);
+
+    if (recentOnly) out = out.filter((a) => isRecent(a.added));
 
     if (listenerCap) {
       const cap = Number(listenerCap);
@@ -76,12 +94,23 @@ export default function Dashboard({
     return out.sort((a, b) => {
       if (sortBy === "name-asc") return a.name.localeCompare(b.name);
       if (sortBy === "status") return a.status.localeCompare(b.status);
-      if (sortBy === "popularity-desc") return (b.popularity ?? -1) - (a.popularity ?? -1);
+      // ISO dates sort correctly as strings; undated rows fall to the bottom.
+      if (sortBy === "added-desc") return (b.added ?? "").localeCompare(a.added ?? "");
+      if (sortBy === "added-asc") {
+        if (!a.added) return 1;
+        if (!b.added) return -1;
+        return a.added.localeCompare(b.added);
+      }
       const av = a.monthlyListeners ?? Number.POSITIVE_INFINITY;
       const bv = b.monthlyListeners ?? Number.POSITIVE_INFINITY;
       return sortBy === "listeners-desc" ? bv - av : av - bv;
     });
-  }, [artists, status, listenerCap, search, sortBy]);
+  }, [artists, status, listenerCap, search, sortBy, recentOnly]);
+
+  const recentCount = useMemo(
+    () => artists.filter((a) => isRecent(a.added)).length,
+    [artists]
+  );
 
   const shortlisted = useMemo(
     () => artists.filter((a) => shortlist.has(a.id)),
@@ -219,10 +248,20 @@ export default function Dashboard({
           >
             <option value="listeners-asc">Monthly listeners — low to high</option>
             <option value="listeners-desc">Monthly listeners — high to low</option>
-            <option value="popularity-desc">Spotify popularity — high to low</option>
+            <option value="added-desc">Recently added — newest first</option>
+            <option value="added-asc">Recently added — oldest first</option>
             <option value="name-asc">Name — A to Z</option>
             <option value="status">Status</option>
           </select>
+
+          <label>Added</label>
+          <button
+            className={`status-btn${recentOnly ? " active" : ""}`}
+            onClick={() => setRecentOnly((v) => !v)}
+          >
+            Added in the last 7 days
+            <span className="btn-count">{recentCount}</span>
+          </button>
 
           <div className="divider" />
 
@@ -299,6 +338,7 @@ export default function Dashboard({
                       <span className={`pill ${statusClass(a.status)}`}>
                         {a.status}
                       </span>
+                      {isRecent(a.added) && <span className="pill new">New</span>}
                     </div>
 
                     <p className="card-signal">{a.signal}</p>
@@ -310,22 +350,6 @@ export default function Dashboard({
                       <span>
                         Top track: <strong>{formatNumber(a.topTrackStreams)}</strong>
                       </span>
-                      {a.followers !== null && (
-                        <span>
-                          Followers: <strong>{abbreviate(a.followers)}</strong>
-                        </span>
-                      )}
-                      {a.popularity !== null && (
-                        <span>
-                          <span className="pop-meter">
-                            Popularity
-                            <span className="pop-bar">
-                              <span style={{ width: `${a.popularity}%` }} />
-                            </span>
-                            <strong>{a.popularity}</strong>
-                          </span>
-                        </span>
-                      )}
                       {a.source && (
                         <span>
                           <a href={a.sourceUrl} target="_blank" rel="noopener noreferrer">
@@ -365,15 +389,13 @@ export default function Dashboard({
       <footer id="methodology">
         <span className="eyebrow">Methodology</span>
         <p>
-          Curated in Notion and served live — editing a row updates this page
-          without a redeploy. Monthly listeners and top-track streams are
-          verified by hand and stamped with the date they were last checked,
-          because Spotify&rsquo;s Web API exposes neither number; getting them
-          on a schedule would mean a paid data vendor such as Songstats or
-          Chartmetric. A daily job is wired up to refresh the figures the API
-          {" "}<em>does</em> serve — followers, popularity, artist images — but
-          Spotify gates Web API access on the app owner holding an active
-          Premium subscription, so it stays dormant until that is in place.
+          Compiled from trade press, editorial &ldquo;artists to watch&rdquo;
+          features, niche music newsletters, and Spotify&rsquo;s public artist
+          pages. Curated in Notion and served live, so the roster updates
+          without a redeploy. Listener and stream counts are verified by hand
+          and stamped with the date they were last checked, then re-checked on
+          a schedule — an artist who outgrows the thresholds gets moved out
+          rather than quietly left in.
         </p>
       </footer>
     </main>

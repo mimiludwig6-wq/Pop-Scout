@@ -5,11 +5,10 @@ description: Refresh Pop Scout artist data from Spotify's public pages and write
 
 # Refresh the Pop Scout roster
 
-Spotify's Web API is unavailable to this project — it gates access on the app
-owner holding Premium, and it never exposed monthly listeners or per-track play
-counts anyway. Both numbers *are* on the public artist page, which is where they
-came from originally. This skill re-gathers them by reading those pages directly
-and writing the results into Notion.
+There is no Spotify API integration: the Web API exposes neither monthly
+listeners nor per-track play counts, which are the two numbers this whole filter
+rests on. Both live only on the public artist page. This skill reads those pages
+directly and writes the results into Notion.
 
 No API tokens needed. The Notion connector handles reads and writes; the browser
 handles Spotify.
@@ -158,10 +157,10 @@ Property-name traps, both of which fail silently rather than erroring:
 - On the **Sources** database the URL property is `userDefined:URL`, not `URL`.
   (Notion reserves bare `url` and `id`.)
 
-Leave `Last Synced` alone — that column belongs to the automated API job. This
-skill is the human-verified path, so `Checked At` is the correct stamp. Keeping
-them distinct is what lets the dashboard tell the truth about which numbers were
-machine-refreshed and which were checked by hand.
+`Checked At` is the only freshness signal in the system — there is no automated
+refresh behind it. The Spotify Web API integration was removed because the API
+exposes neither monthly listeners nor per-track play counts, so this workflow is
+the sole path by which those numbers ever change.
 
 ## Step 5 — report
 
