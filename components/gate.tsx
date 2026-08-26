@@ -117,11 +117,6 @@ export default function Gate({ children }: { children: React.ReactNode }) {
             </button>
           </div>
           {error && <p className="gate-error">{error}</p>}
-          <p className="gate-note">
-            Recorded so I know who&rsquo;s seen the project — your address and
-            the date you visited, nothing else. Not shared, not mailed, not
-            passed on.
-          </p>
         </form>
       </section>
     </main>

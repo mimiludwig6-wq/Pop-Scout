@@ -560,13 +560,26 @@ footer p {
 /* ---------- Sign-in gate ---------- */
 
 .gate {
-  padding: var(--space-20) 0 var(--space-16);
+  min-height: calc(100vh - 220px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   max-width: 620px;
+  margin: 0 auto;
+  padding: var(--space-16) 0;
 }
 
 .gate .eyebrow { margin-bottom: var(--space-4); }
+.gate .hero-headline { margin-bottom: var(--space-5); }
+.gate .hero-sub { margin: 0 auto var(--space-10); }
 
-.gate-form { margin-top: var(--space-10); }
+.gate-form {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
 
 .gate-form label {
   display: block;
@@ -580,7 +593,6 @@ footer p {
 .gate-row {
   display: flex;
   gap: var(--space-2);
-  max-width: 440px;
 }
 
 .gate-row input {
@@ -593,6 +605,7 @@ footer p {
   padding: var(--space-3);
   font-size: 14px;
   font-family: var(--font);
+  text-align: center;
   outline: none;
 }
 
@@ -621,12 +634,4 @@ footer p {
   margin: var(--space-3) 0 0;
   color: var(--warning);
   font-size: 12.5px;
-}
-
-.gate-note {
-  margin: var(--space-5) 0 0;
-  max-width: 440px;
-  color: var(--muted);
-  font-size: 11.5px;
-  line-height: 1.55;
 }
