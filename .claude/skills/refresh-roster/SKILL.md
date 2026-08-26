@@ -175,7 +175,7 @@ State plainly:
 
 The site picks the changes up within the hour on its own. To publish
 immediately, hit `/api/revalidate?secret=<CRON_SECRET>` (the secret is in
-`web/.env.local`).
+`.env.local`).
 
 ---
 

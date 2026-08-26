@@ -77,12 +77,17 @@ Not a live feed yet — every number is a manually verified snapshot with a chec
 ## Running it locally
 
 ```bash
-python3 -m http.server 4174 --bind 127.0.0.1
+npm install && npm run dev
 ```
 
-Then open `http://127.0.0.1:4174/`.
+Then open `http://localhost:3000`. Needs `.env.local` — see
+[DEPLOY.md](DEPLOY.md) for setup and deployment.
 
-## Files
+## Layout
 
-- `index.html`, `app.js`, `styles.css` — the dashboard
-- `data.js` — the artist data, hand-curated and cited per entry
+- `app/`, `components/`, `lib/` — the Next.js app, reading live from Notion
+- `notion/` — database schema, import CSVs, and a rebuild script
+- `.claude/skills/refresh-roster/` — the workflow for re-gathering artist data
+  from Spotify's public pages and writing it back to Notion
+- `legacy/` — the original static prototype (`index.html` + a hardcoded
+  `data.js`). Kept for reference; nothing depends on it.

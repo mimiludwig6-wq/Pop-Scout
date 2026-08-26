@@ -1,3 +1,8 @@
 {
-  "buildCommand": "echo '' && echo '  STOP — Vercel is building the repo root.' && echo '' && echo '  Pop Scout lives in the web/ directory. Set the Vercel project'>&2 && echo '  Root Directory to \"web\":'>&2 && echo '' && echo '    Project -> Settings -> Build and Deployment -> Root Directory -> web'>&2 && echo '' && echo '  Building from here would deploy the old static prototype instead'>&2 && echo '  of the Notion-backed app.'>&2 && echo '' && exit 1"
+  "crons": [
+    {
+      "path": "/api/cron/refresh",
+      "schedule": "0 7 * * *"
+    }
+  ]
 }

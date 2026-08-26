@@ -80,7 +80,6 @@ and Client Secret.
 ### 4. Local run
 
 ```bash
-cd web
 cp .env.example .env.local
 ```
 
@@ -101,11 +100,15 @@ share each database with the integration: in Notion, open the database → `•�
 ## Deploying to Vercel
 
 1. [vercel.com/new](https://vercel.com/new) → import `mimiludwig6-wq/Pop-Scout`.
-2. **Set Root Directory to `web`.** The repo root still holds the original static
-   version; without this Vercel builds the wrong thing.
-3. Add all six environment variables from `.env.example` under
+2. Add all six environment variables from `.env.example` under
    Settings → Environment Variables.
-4. Deploy.
+3. Deploy.
+
+**Leave Root Directory empty.** The app lives at the repo root precisely so that
+setting never has to be touched — an earlier layout kept it in `web/`, and a
+missed Root Directory silently shipped the old static prototype instead. If the
+project still has `web` set from that layout, clear it or the build will fail
+with "directory not found".
 
 The cron in `vercel.json` registers automatically. Vercel passes `CRON_SECRET` as
 a bearer token, so the endpoint is protected without extra work.
