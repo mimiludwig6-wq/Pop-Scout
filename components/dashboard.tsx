@@ -189,18 +189,6 @@ export default function Dashboard({
 
       <div className="rule" />
 
-      <section className="statement">
-        <h2>
-          SIGNAL
-          <br />
-          BEFORE
-          <br />
-          SCALE.
-        </h2>
-      </section>
-
-      <div className="rule" />
-
       <section className="workspace">
         <aside className="filter-panel" id="filters">
           <span className="eyebrow">Filters</span>
