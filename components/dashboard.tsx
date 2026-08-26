@@ -26,11 +26,6 @@ function abbreviate(n: number | null): string {
 /** "Off Genre" -> "off_genre", matching the pill classes in globals.css. */
 const statusClass = (status: Status) => status.toLowerCase().replace(/\s+/g, "_");
 
-function mostRecent(dates: (string | null)[]): string | null {
-  const valid = dates.filter((d): d is string => Boolean(d)).sort();
-  return valid.length ? valid[valid.length - 1] : null;
-}
-
 export default function Dashboard({
   artists,
   sources,
@@ -54,15 +49,6 @@ export default function Dashboard({
       sources: sources.length,
     }),
     [artists, sources]
-  );
-
-  const lastSynced = useMemo(
-    () => mostRecent(artists.map((a) => a.lastSynced)),
-    [artists]
-  );
-  const lastChecked = useMemo(
-    () => mostRecent(artists.map((a) => a.checkedAt)),
-    [artists]
   );
 
   const rows = useMemo(() => {
@@ -170,32 +156,6 @@ export default function Dashboard({
           </div>
         </div>
 
-        <div className="sync-note">
-          <span>
-            {lastSynced ? (
-              <>
-                Followers and popularity auto-refresh from the Spotify API —
-                last sync <strong>{lastSynced}</strong>.
-              </>
-            ) : (
-              <>
-                Automated Spotify refresh is <strong>not running yet</strong> —
-                the Web API requires the app owner to hold Spotify Premium.
-              </>
-            )}
-          </span>
-          <span>
-            Every figure here is human-verified
-            {lastChecked ? (
-              <>
-                {" "}
-                — last check <strong>{lastChecked}</strong>
-              </>
-            ) : null}
-            . Spotify&rsquo;s API exposes neither monthly listeners nor
-            per-track play counts, so those stay manual regardless.
-          </span>
-        </div>
       </section>
 
       <div className="rule" />
