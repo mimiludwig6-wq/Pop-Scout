@@ -1,5 +1,7 @@
 # Pop Scout
 
+**Live: [pop-scout.vercel.app](https://pop-scout.vercel.app)**
+
 A working watchlist for scouting emerging pop artists — built to find acts small enough to still be signable, not another "artists to watch" list full of names that already have a machine behind them.
 
 ## What it does
@@ -16,7 +18,11 @@ Artists are sorted into:
 - **Off genre** — doesn't fit pop regardless of size, kept for the record rather than deleted
 - **Unverified** — flagged by a source but not yet checked against Spotify
 
-As of the last update: 70 artists tracked, 18 qualifying, 46 established, 6 off genre, across **51 registered sources** — 26 already contributing artist data (trade press, newsletters, and Spotify), plus the 25 below that were added on top and are confirmed as real, on-topic sources but not yet mined.
+As of the last refresh (26 Aug 2026): **70 artists tracked, 15 qualifying**, 49 established, 6 off genre, across **39 registered sources** — 14 actively producing artists, plus 25 confirmed on-topic but not yet mined.
+
+Live numbers are read from Notion at request time, so the site and this README can drift; the site is authoritative.
+
+The last refresh moved three artists out of *Qualifies* — Eileen Alister, AmiiFy and Lauren Auder each had a well-known single recorded as their top track rather than their most-played one, and all three are in fact well over the stream cap. That failure mode is the reason the roster gets re-checked rather than trusted: a watchlist of artists who are already too big is worse than no watchlist.
 
 ## Sources
 
