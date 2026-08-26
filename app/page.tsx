@@ -1,4 +1,5 @@
 import Dashboard from "@/components/dashboard";
+import Gate from "@/components/gate";
 import { getRoster } from "@/lib/notion";
 
 // Server Component. The roster comes from Notion at request time (cached an
@@ -38,5 +39,9 @@ export default async function Page() {
     );
   }
 
-  return <Dashboard artists={artists} sources={sources} />;
+  return (
+    <Gate>
+      <Dashboard artists={artists} sources={sources} />
+    </Gate>
+  );
 }
