@@ -16,6 +16,19 @@ export type SpotifyArtist = {
   imageUrl?: string;
 };
 
+/**
+ * Spotify gates Web API access on the app owner holding an active Premium
+ * subscription. Credentials can be perfectly valid and still get a 403 here,
+ * so this is worth distinguishing from a transient failure — nothing about
+ * retrying or rotating keys will fix it.
+ */
+export class SpotifyEntitlementError extends Error {
+  constructor(detail: string) {
+    super(detail);
+    this.name = "SpotifyEntitlementError";
+  }
+}
+
 function requireEnv(name: string): string {
   const v = process.env[name];
   if (!v) throw new Error(`Missing ${name} — see web/.env.example.`);
@@ -60,7 +73,11 @@ export async function getArtists(
     );
 
     if (!res.ok) {
-      throw new Error(`Spotify artists ${res.status}: ${await res.text()}`);
+      const body = await res.text();
+      if (res.status === 403 && /premium/i.test(body)) {
+        throw new SpotifyEntitlementError(body.trim());
+      }
+      throw new Error(`Spotify artists ${res.status}: ${body}`);
     }
 
     const data = await res.json();

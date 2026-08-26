@@ -172,24 +172,28 @@ export default function Dashboard({
 
         <div className="sync-note">
           <span>
-            Followers and popularity auto-refresh from the Spotify API
             {lastSynced ? (
               <>
-                {" "}
-                — last sync <strong>{lastSynced}</strong>
+                Followers and popularity auto-refresh from the Spotify API —
+                last sync <strong>{lastSynced}</strong>.
               </>
-            ) : null}
-            .
+            ) : (
+              <>
+                Automated Spotify refresh is <strong>not running yet</strong> —
+                the Web API requires the app owner to hold Spotify Premium.
+              </>
+            )}
           </span>
           <span>
-            Monthly listeners and top-track streams are human-verified
+            Every figure here is human-verified
             {lastChecked ? (
               <>
                 {" "}
                 — last check <strong>{lastChecked}</strong>
               </>
             ) : null}
-            . Spotify&rsquo;s API doesn&rsquo;t expose either number.
+            . Spotify&rsquo;s API exposes neither monthly listeners nor
+            per-track play counts, so those stay manual regardless.
           </span>
         </div>
       </section>
@@ -402,12 +406,14 @@ export default function Dashboard({
         <span className="eyebrow">Methodology</span>
         <p>
           Curated in Notion and served live — editing a row updates this page
-          without a redeploy. Followers, popularity, and artist images refresh
-          daily from the Spotify Web API. Monthly listeners and top-track
-          streams are verified by hand, because Spotify&rsquo;s API
-          doesn&rsquo;t expose them; each is stamped with the date it was last
-          checked. Getting those on a schedule would mean a paid data vendor
-          such as Songstats or Chartmetric.
+          without a redeploy. Monthly listeners and top-track streams are
+          verified by hand and stamped with the date they were last checked,
+          because Spotify&rsquo;s Web API exposes neither number; getting them
+          on a schedule would mean a paid data vendor such as Songstats or
+          Chartmetric. A daily job is wired up to refresh the figures the API
+          {" "}<em>does</em> serve — followers, popularity, artist images — but
+          Spotify gates Web API access on the app owner holding an active
+          Premium subscription, so it stays dormant until that is in place.
         </p>
       </footer>
     </main>

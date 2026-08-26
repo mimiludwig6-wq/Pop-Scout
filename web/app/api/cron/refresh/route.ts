@@ -6,7 +6,11 @@ import {
   listArtistsForSync,
   updateArtistMetrics,
 } from "@/lib/notion";
-import { getAccessToken, getArtists } from "@/lib/spotify";
+import {
+  SpotifyEntitlementError,
+  getAccessToken,
+  getArtists,
+} from "@/lib/spotify";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -79,6 +83,23 @@ export async function GET(request: Request) {
       syncedAt: new Date().toISOString(),
     });
   } catch (error) {
+    // Credentials are fine but the account isn't entitled — retrying won't help,
+    // so say so plainly instead of burying it in a generic 500.
+    if (error instanceof SpotifyEntitlementError) {
+      return NextResponse.json(
+        {
+          ok: false,
+          reason: "spotify_premium_required",
+          message:
+            "Spotify requires the app owner to hold an active Premium " +
+            "subscription for Web API access. The credentials are valid; the " +
+            "account is not entitled. Nothing in the roster was changed.",
+          detail: error.message,
+        },
+        { status: 503 }
+      );
+    }
+
     return NextResponse.json(
       { ok: false, error: error instanceof Error ? error.message : String(error) },
       { status: 500 }
