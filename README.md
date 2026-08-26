@@ -78,7 +78,13 @@ Instagram-based music discovery accounts identified as candidate sources. Bios c
 
 The six "via Offline Crush" tools above are all referenced from a single Offline Crush Substack post rounding up music-discovery tools, rather than being outlets that publish artist coverage themselves — registered as candidate sources per request, but their actual usefulness for finding signable pop acts (versus general genre/taste exploration) hasn't been evaluated yet.
 
-Not a live feed yet — every number is a manually verified snapshot with a checked-at date. The plan is to wire this to a real API backend for continuous, automatically refreshing coverage.
+## How the data stays current
+
+The roster lives in Notion and the site reads it at request time, so editing a row changes the site without a redeploy.
+
+Listener and stream counts are **verified by hand**, each stamped with the date it was checked. That isn't a shortcut — Spotify's Web API exposes neither monthly listeners nor per-track play counts, so no amount of API access would supply them. Both numbers exist only on the public artist page. `.claude/skills/refresh-roster/` documents the re-checking workflow, including the two things that make it fragile: the play-count column renders only above ~1500px viewport width, and Spotify's "Popular" list is ordered by its own ranking rather than by plays, so the first track shown is frequently not the most-played one.
+
+A daily job is wired up to refresh what the API *does* serve — followers, popularity, artist images — but Spotify gates Web API access on the app owner holding Premium, so it stays dormant until that's in place. Getting real monthly-listener data on a schedule would mean a paid vendor such as Songstats or Chartmetric.
 
 ## Running it locally
 
