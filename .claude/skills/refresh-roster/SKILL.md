@@ -105,11 +105,24 @@ Read from it:
 For the artist photo, run in the same tab:
 
 ```js
-document.querySelector('meta[property="og:image"]').content
+(function(){
+  const el = document.querySelector('img[src*="i.scdn.co/image/ab676161"]');
+  if (!el) return null;
+  return el.src.replace(/(i\.scdn\.co\/image\/ab6761610000)[0-9a-f]{4}/, '$1e5eb');
+})();
 ```
 
-This is reliable **only** on a direct artist-page load. It returns a stale or
-wrong image during search flows.
+**Do not use `meta[property="og:image"]`.** It worked until 26 Aug 2026, when
+Spotify stopped serving OG tags to logged-out sessions — only `og:site_name`
+remains. It now returns null, silently, which is how a whole run can complete
+with no images and no error.
+
+The selector must include `ab676161`, the prefix for *artist* images;
+`ab67616d` is album art and would give you a record sleeve instead. The four
+hex characters after `ab6761610000` are a size code (`101f` 160px, `5174`
+320px, `e5eb` 640px); the replace normalises whatever the page rendered up to
+full size. The first matching image is the artist's own — later ones belong to
+"Fans also like".
 
 ### When Spotify starts refusing
 
